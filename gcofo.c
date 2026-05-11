@@ -56,6 +56,50 @@ void *gcofGetNext( gCofo *gc){
     }
     return NULL;
 }
+void *gcofProcurar(gCofo *gc, void *key, int(*cmp)(void *, void *)){
+    void * data;
+    int i;
+    int stat;
+    if(gc != NULL && gc -> numItens>0 ){
+        i = 0; stat = cmp(key, gc -> item[i]);
+        while(i < gc -> numItens && stat != TRUE){
+            i++;
+            stat = cmp(key, gc->item[i]);
+        }
+        if(stat == TRUE) {
+            data = gc ->item[i];
+            return data;
+        }
+        
+
+    }
+    return NULL;
+}
+
+void *gcofRemover(gCofo *gc, void *key, int(*cmp)(void *, void *)){
+     void * data;
+    int i;
+    int stat;
+    if(gc != NULL && gc -> numItens > 0){
+        i = 0; stat = cmp(key, gc -> item[i]);
+        while(i < gc -> numItens && stat != TRUE){
+            i++;
+            stat = cmp(key, gc->item[i]);
+        }
+        if(stat ==TRUE){
+            data = gc ->item[i];
+            for(int j = i; j < gc->numItens; j++){
+                gc->item[j] = gc->item[j+1];
+            }
+            gc -> numItens--;
+            return data;
+        }
+
+    }
+    return NULL;
+}
+
+
 
 int gcofDestruir( gCofo *gc){
     if(gc != NULL){
