@@ -98,6 +98,20 @@ void *gcofRemover(gCofo *gc, void *key, int(*cmp)(void *, void *)){
     }
     return NULL;
 }
+int gcofEsvaziar( gCofo *gc ){
+    int i;
+    if(gc != NULL) {
+        for(i = 0;i < gc ->numItens; i++){
+            free(gc->item[i]);
+            
+        }
+        gc->numItens = 0;
+        return TRUE;
+        
+        
+    }
+    return FALSE;
+}
 
 
 
