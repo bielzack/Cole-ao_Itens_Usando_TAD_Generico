@@ -2,13 +2,11 @@
 ## Grimório de Magias da Frieren
 
 # Sobre o Projeto
-Este projeto foi desenvolvido em linguagem C com o objetivo de criar um **TAD Genérico** chamado `gCofo`.
+Este projeto tem como objetivo desenvolver um TAD Genérico chamado gCofo.
 
-A estrutura funciona como uma coleção capaz de armazenar qualquer tipo de dado utilizando ponteiros genéricos (`void *`).
+A estrutura foi criada para funcionar como uma coleção flexível, permitindo armazenar e organizar diferentes tipos de informações de forma dinâmica e reutilizável.
 
-Para mostrar o funcionamento do TAD na prática, foi criada uma aplicação inspirada no universo da Frieren, onde o usuário pode gerenciar um **Grimório de Magias** pelo terminal.
-
-No programa é possível cadastrar, listar, buscar e remover magias através de um menu interativo.
+Para demonstrar seu funcionamento na prática, foi desenvolvida uma aplicação inspirada no universo de Frieren, onde o usuário pode gerenciar um Grimório de Magias através de um menu interativo, realizando operações como cadastro, busca, listagem e remoção de magias.
 
 ---
 
@@ -41,3 +39,51 @@ Cada magia possui as seguintes informações:
 ```bash
 gcc -g main.c gcofo.c -o app
 ./app
+```
+# Windows
+```bash
+gcc -g main.c gcofo.c -o app
+.\app.exe
+```
+
+---
+
+# Funcionalidades do Programa
+
+## 1 - Criar Grimório
+Cria a coleção que irá armazenar as magias utilizando a função `gcofCriar`.
+
+## 2 - Inserir Nova Magia
+Adiciona uma nova magia no grimório usando `gcofInserir`.
+
+## 3 - Listar Magias
+Mostra todas as magias cadastradas utilizando os iteradores:
+
+- `gcofGetFirst`
+- `gcofGetNext`
+
+## 4 - Consultar Magia
+Busca uma magia no grimório através da função `gcofProcurar`.
+
+A busca pode ser feita por:
+
+- Nome
+- Nível
+- Custo de mana
+
+## 5 - Remover Magia
+Remove uma magia da coleção usando `gcofRemover`.
+
+## 6 - Esvaziar Grimório
+Remove todas as magias cadastradas utilizando `gcofEsvaziar`.
+
+## 7 - Destruir Grimório
+Libera toda a memória do TAD através da função `gcofDestruir`.
+
+## 0 - Sair
+Encerra o programa realizando a liberação correta da memória.
+
+# Informações Acadêmicas
+
+- **Disciplina:** Estrutura de Dados I 
+- **Disciplina:** Gabriel Serra Bastos
