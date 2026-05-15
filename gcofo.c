@@ -62,7 +62,7 @@ void *gcofProcurar(gCofo *gc, void *key, int(*cmp)(void *, void *)){
     int stat;
     if(gc != NULL && gc -> numItens>0 ){
         i = 0; stat = cmp(key, gc -> item[i]);
-        while(i < gc -> numItens && stat != TRUE){
+        while(i < gc -> numItens - 1 && stat != TRUE){
             i++;
             stat = cmp(key, gc->item[i]);
         }
