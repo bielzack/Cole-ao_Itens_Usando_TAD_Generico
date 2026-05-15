@@ -19,6 +19,7 @@ void *gcofRemover(gCofo *c, void *key, int(*cmp)(void *, void *));
 void *gcofProcurar(gCofo *c, void *key, int(*cmp)(void *, void *));
 void *gcofGetFirst( gCofo *c);
 void *gcofGetNext( gCofo *c);
+int gcofQuantidade( gCofo *c);
 int gcofEsvaziar( gCofo *c );
 int gcofDestruir( gCofo *c);
 
@@ -31,6 +32,7 @@ extern void *gcofRemover( gCofo *c, void *key, int (*cmp)(void *, void *));
 extern void *gcofProcurar( gCofo *c, void *key, int (*cmp)(void *, void *));
 extern void *gcofGetFirst( gCofo *c );
 extern void *gcofGetNext( gCofo *c );
+extern int gcofQuantidade( gCofo *c);
 extern int gcofEsvaziar( gCofo *c );
 extern int gcofDestruir( gCofo *c );
 
