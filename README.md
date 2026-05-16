@@ -57,10 +57,8 @@ Cria a coleção que irá armazenar as magias utilizando a função `gcofCriar`.
 Adiciona uma nova magia no grimório usando `gcofInserir`.
 
 ## 3 - Listar Magias
-Mostra todas as magias cadastradas utilizando os iteradores:
+Mostra todas as magias cadastradas utilizando os iteradores
 
-- `gcofGetFirst`
-- `gcofGetNext`
 
 ## 4 - Consultar Magia
 Busca uma magia no grimório através da função `gcofProcurar`.
@@ -86,4 +84,4 @@ Encerra o programa realizando a liberação correta da memória.
 # Informações Acadêmicas
 
 - **Disciplina:** Estrutura de Dados I 
-- **Disciplina:** Gabriel Serra Bastos
+- **Discente:** Gabriel Serra Bastos
