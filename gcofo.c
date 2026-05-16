@@ -88,7 +88,7 @@ void *gcofRemover(gCofo *gc, void *key, int(*cmp)(void *, void *)){
         }
         if(stat ==TRUE){
             data = gc ->item[i];
-            for(int j = i; j < gc->numItens; j++){
+            for(int j = i; j < gc->numItens - 1; j++){
                 gc->item[j] = gc->item[j+1];
             }
             gc -> numItens--;
