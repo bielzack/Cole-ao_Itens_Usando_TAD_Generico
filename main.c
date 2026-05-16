@@ -163,9 +163,9 @@ int main(){
 
                     m = (Magia *) gcofProcurar(cofo, (void *)nome, cmpNome );
                     if( m != NULL){
-                        printf("Nome da magia:%s\n\n", m->nome);
-                        printf("Nivel:%d\n\n", m->nivel);
-                        printf("Custo de mana\n\n:%.2f",m->custo_mana);
+                        printf("Nome da magia:%s\n", m->nome);
+                        printf("Nivel:%d\n", m->nivel);
+                        printf("Custo de mana\n:%.2f",m->custo_mana);
                     }else{
                         printf("magia nao encontrada!\n\n");
                     }
@@ -178,9 +178,9 @@ int main(){
                     scanf("%d", &nivel);
                     m = (Magia *) gcofProcurar(cofo,(void *)&nivel, cmpNivel);
                         if( m != NULL){
-                            printf("Nome da magia:%s\n\n", m->nome);
-                            printf("Nivel:%d\n\n", m->nivel);
-                            printf("Custo de mana:%2.f\n\n",m->custo_mana);
+                            printf("Nome da magia:%s\n", m->nome);
+                            printf("Nivel:%d\n", m->nivel);
+                            printf("Custo de mana:%.2f\n",m->custo_mana);
 
                         } else {
                             printf("Magia nao  foi encontrado\n\n");
@@ -196,12 +196,12 @@ int main(){
         
                     m = (Magia *) gcofProcurar(cofo, (void *)&mana, cmpMana);
                     if(m != NULL){
-                            printf("Nome da magia: %s\n\n", m->nome);
+                            printf("Nome da magia: %s\n", m->nome);
                             printf("Nivel: %d\n", m->nivel);
-                            printf("Custo de mana: %f\n", m->custo_mana);
+                            printf("Custo de mana: %.2f\n", m->custo_mana);
                             
                     } else{
-                        printf("Magia nao encontrada!");
+                        printf("\nMagia nao encontrada!\n\n");
                     }
             
                 }
@@ -217,17 +217,17 @@ int main(){
                 Magia *m;
                 int delet;
 
-                printf("Remover pelo nome == 1\n\n");
-                printf("Remover pelo nivel == 2\n\n"); 
-                printf("Remover pelo custo de mana == 3\n\n");
-                printf("Informe o campo para a remocao: \n\n");
+                printf("Remover pelo nome == 1\n");
+                printf("Remover pelo nivel == 2\n"); 
+                printf("Remover pelo custo de mana == 3\n");
+                printf("Informe o campo para a remocao: \n");
                 scanf("%d", &delet);
                 limparBuffer();
             
 
                 if(delet == 1){
                     char nome[30];
-                    printf("Qual  o nome da magia: ");
+                    printf("Qual  o nome da magia: \n");
                     fgets(nome, sizeof(nome), stdin);
                     nome[strcspn(nome, "\n")] = 0;
 
@@ -242,7 +242,7 @@ int main(){
                 }
                 if(delet == 2){
                     int nivel;
-                    printf("Digite o nivel da magia:");
+                    printf("Digite o nivel da magia: \n");
                     scanf("%d", &nivel);
                     m = (Magia *) gcofRemover(cofo,(void *)&nivel, cmpNivel);
                         if( m != NULL){
@@ -308,7 +308,7 @@ int main(){
             printf("Ate logo\n");
 
         } else {
-            printf("Opcao invalida!");
+            printf("Opcao invalida!\n\n");
         }
         
 
@@ -316,7 +316,7 @@ int main(){
       if(cofo != NULL){
         gcofEsvaziar(cofo);
         gcofDestruir(cofo);
-        printf("Grimorio destruido ao fechar o proframa");
+        printf("\n\nGrimorio destruido ao fechar o proframa\n\n");
         
     }  
     
